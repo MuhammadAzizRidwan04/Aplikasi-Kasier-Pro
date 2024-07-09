@@ -270,7 +270,9 @@ public class Makanan extends javax.swing.JPanel {
         if (i == -1) {
             return;
         }
-        String id = (String) model.getValueAt(i, 0);
+
+        String id = (String) TbMakanan.getValueAt(i, 0);
+
         String nama = txNamaMakanan.getText();
         String harga = txHarga.getText();
 
@@ -291,7 +293,7 @@ public class Makanan extends javax.swing.JPanel {
             btnBatal.setEnabled(false);
             clear();
         } catch (Exception e) {
-            System.out.println("Update Error");
+            System.out.println("Update Error: " + e.getMessage());
         } finally {
             loadData();
             nomorOtomatis();
@@ -307,7 +309,9 @@ public class Makanan extends javax.swing.JPanel {
             return;
         }
 
-        String id = (String) model.getValueAt(i, 0);
+
+        String id = (String) TbMakanan.getValueAt(i, 0);
+
         int pernyataan = JOptionPane.showConfirmDialog(null, "Yakin Data Akan Dihapus", "Konfirmasi", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
         if (pernyataan == JOptionPane.OK_OPTION) {
             try {
@@ -319,7 +323,7 @@ public class Makanan extends javax.swing.JPanel {
                 p.close();
                 JOptionPane.showMessageDialog(null, "Data Terhapus");
             } catch (Exception e) {
-                System.out.println("Terjadi Kesalahan");
+                System.out.println("Terjadi Kesalahan: " + e.getMessage());
             } finally {
                 btnSimpan.setEnabled(true);
                 btnEdit.setEnabled(false);
@@ -329,10 +333,10 @@ public class Makanan extends javax.swing.JPanel {
                 nomorOtomatis();
                 clear();
             }
+        } else if (pernyataan == JOptionPane.CANCEL_OPTION) {
+           
         }
-        if (pernyataan == JOptionPane.CANCEL_OPTION) {
 
-        }
     }//GEN-LAST:event_btnHapusActionPerformed
 
     private void btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanActionPerformed

@@ -93,7 +93,7 @@ public class Print extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        btnHapus.setText("Hapus");
+        btnHapus.setText("Kembali");
         btnHapus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHapusActionPerformed(evt);
@@ -150,7 +150,7 @@ public class Print extends javax.swing.JFrame {
             stm.executeUpdate(sql);
 
             
-            JOptionPane.showMessageDialog(this, "Data berhasil dihapus dari tabel penjualan_rinci", "Info", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Struk Baru", "Info", JOptionPane.INFORMATION_MESSAGE);
 
             
             stm.close();
