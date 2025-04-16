@@ -9,7 +9,7 @@ package kasirpro;
  * @author M. Aziz Ridwan
  */
 public class About extends javax.swing.JPanel {
-
+//
     /**
      * Creates new form About
      */

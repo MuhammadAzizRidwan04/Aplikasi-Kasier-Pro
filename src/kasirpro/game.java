@@ -82,7 +82,7 @@ public class game extends JPanel implements ActionListener, KeyListener {
     }
 
     private void gameOver(Graphics g) {
-        String message = "GAME OVER";
+        String message = "  SMKN 1 TANJUNGANOM";
         Font font = new Font("Helvetica", Font.BOLD, 40);
         FontMetrics metrics = getFontMetrics(font);
 
